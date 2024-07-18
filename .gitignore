@@ -1,0 +1,9 @@
+# Ignore files and directories in the server folder
+/server/.env
+/server/node_modules
+
+# Ignore files and directories in the client folder
+/client/.env
+/client/node_modules
+
+# Ignore any other files or directories you want to exclude from version control

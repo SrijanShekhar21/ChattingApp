@@ -1,0 +1,1224 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.home {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.homeLeft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  background-color: #1c4532;
+  position: relative;
+}
+
+.ellipse {
+  position: absolute;
+  top: -25rem;
+  right: -25rem;
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom left,
+    hsla(204, 45%, 98%, 0.8),
+    hsl(210, 38%, 95%, 0)
+  );
+}
+
+.homeLeft h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-top: 3rem;
+}
+
+.homeLeftMain {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.homeFeatures {
+  background-color: white;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.homeFeatures h2 {
+  color: #1c4532;
+  padding: 0;
+  font-size: 2rem;
+  margin: 1rem;
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+
+.homeFeatures ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: #718096;
+  margin: 1rem;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+}
+
+.homeFeatures ul li {
+  margin: 0.3rem 0;
+}
+
+.creator {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.creator h3 {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: #f7fafc;
+}
+
+.creator p {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #cfd9e0;
+}
+
+.authDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  padding: 2rem;
+}
+
+.login,
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 75%;
+  width: 100%;
+}
+
+.login h1,
+.register h1 {
+  font-size: 3rem;
+  color: #171923;
+}
+
+.login form,
+.register form {
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  /* flex-grow: 1; */
+  padding: 2rem;
+}
+
+.inputDiv {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid hsl(0, 0%, 75%);
+  width: 50%;
+  padding: 0.5rem 0.5rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.inputDiv input {
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.inputDiv input:focus {
+  outline: none;
+}
+
+.login form button,
+.register form button {
+  width: 50%;
+  padding: 1rem 1rem;
+  border-radius: 15px;
+  border: none;
+  background-color: #1c4532;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.eye img {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.login,
+.register {
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.dashboard {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.dashLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 30%;
+}
+
+.UserDPTabComponentDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 5rem;
+  padding: 0.3rem;
+}
+
+.UserDPTabComponent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem;
+  background-color: hsl(0, 0%, 100%);
+  position: relative;
+  color: hsl(0, 0%, 5%);
+  border-radius: 1rem;
+  box-shadow: 0 0 4px 1px hsl(0, 0%, 85%);
+}
+
+.UserDPTabComponent img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 1rem;
+}
+
+.name p {
+  font-size: 0.7rem;
+}
+
+.editProfile {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: calc(100% - 0.6rem);
+  height: calc(100% - 0.6rem);
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 90%);
+  box-shadow: 0 0 4px 1px hsl(0, 0%, 85%);
+  z-index: 2;
+  top: 0.3rem;
+  /* padding: 1rem; */
+  animation-name: slideUp;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.editProfile h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  background-color: #1c4532;
+  width: 100%;
+  height: 4rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+  font-weight: normal;
+}
+
+.editProfile img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  margin: 2rem 0;
+}
+
+.inputEditDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.inputEditDiv input {
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: hsl(0, 0%, 100%);
+  color: #1c4532;
+}
+
+.editNameLabel {
+  color: #1c4532;
+  width: 100%;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.editProfile input:focus {
+  outline: none;
+}
+
+.editButtonsDiv {
+  /* border: 2px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.3rem;
+  margin-top: 1rem;
+}
+
+.editProfile button {
+  width: 50%;
+  padding: 1rem 1rem;
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  color: #00be10;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 1rem 1rem;
+}
+
+.editProfile button:hover {
+  background-color: #00be10;
+  color: white;
+}
+
+.editProfile button.logout {
+  background-color: white;
+  color: rgb(255, 0, 0);
+}
+
+.editProfile button.logout:hover {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0%;
+    left: -5rem;
+  }
+  100% {
+    left: 0.3rem;
+    opacity: 100%;
+  }
+}
+
+.UsersComponentDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0.3rem;
+  position: relative;
+}
+
+.UsersComponent {
+  flex-grow: 1;
+  display: inline-block;
+  width: 100%;
+  height: 10vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* padding-bottom: 5px; */
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 0 4px 1px hsl(0, 0%, 85%);
+}
+
+.UsersComponent::-webkit-scrollbar {
+  display: none;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 4.5rem;
+  padding: 1rem 1rem;
+  position: relative;
+  /* border-bottom: 0.5px solid hsl(0, 0%, 75%); */
+  background-color: hsl(0, 0%, 100%);
+  position: relative;
+}
+
+.underline {
+  border-bottom: 0.5px solid hsl(0, 0%, 85%);
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  bottom: 0;
+}
+
+.imgDp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.contact img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.contact h3 {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 1rem;
+  flex-grow: 1;
+  font-weight: normal;
+}
+
+.typing {
+  /* font-weight: bold; */
+  font-size: 0.8rem;
+  color: hsl(120, 100%, 45%);
+}
+
+.activeDot {
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.1rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: hsl(120, 100%, 45%);
+  border: 3.5px solid rgb(255, 255, 255);
+}
+
+.notActive {
+  display: none;
+}
+
+.dashRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 70%;
+}
+
+.ChatComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.chatComponentTopDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  padding: 0.3rem;
+}
+
+.chatComponentTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 4px 1px hsl(0, 0%, 85%);
+  background-color: #ffffff;
+  position: relative;
+  color: white;
+}
+
+.chatUserDP {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.backArrow {
+  display: none;
+}
+
+.chattinWithNameDiv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  color: black;
+  width: 100%;
+}
+
+.chattinWithNameDiv h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.chattinWithNameDiv p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  flex-grow: 1;
+  font-size: 0.8rem;
+}
+
+.online,
+.isTyping {
+  color: hsl(120, 100%, 45%);
+}
+
+.offline {
+  color: hsl(0, 0%, 65%);
+}
+
+.chatComponentMidDiv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 9rem);
+  padding: 0.3rem;
+  position: relative;
+}
+
+.chatComponentMid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 4px 1px hsl(0, 0%, 85%);
+  padding: 0.5rem;
+}
+
+.chatComponentMid::-webkit-scrollbar {
+  display: none;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+  max-width: 100vh;
+
+  border-radius: 1rem;
+  background-color: aliceblue;
+  word-break: break-all;
+  position: relative;
+}
+
+.messageTime {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.7rem;
+  color: hsl(0, 0%, 65%);
+  bottom: -0.9rem;
+}
+
+.receivedMessage {
+  align-self: flex-start;
+  background-color: hsl(0, 0%, 95%);
+  /* margin-left: 1rem; */
+  border-bottom-left-radius: 0;
+  box-shadow: 0 1px 1px 1px hsl(0, 0%, 85%);
+}
+
+.sentMessage {
+  align-self: flex-end;
+  background-color: hsl(240, 50%, 15%);
+  backdrop-filter: blur(5px);
+  /* margin-right: 1rem; */
+  border-bottom-right-radius: 0;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 1px 1px 1px hsl(0, 0%, 85%);
+}
+
+.messageContent {
+  /* border: 2px solid black; */
+  padding: 0.5rem;
+  padding-bottom: 0;
+}
+
+.messageTime {
+  /* border: 2px solid red; */
+  padding: 0 1rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.2rem;
+}
+
+.chatComponentBottomDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 4rem;
+  padding: 0.3rem;
+  position: relative;
+}
+
+.filesToolTip {
+  position: absolute;
+  left: 0.3rem;
+  bottom: 0.3rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 5px 1px hsl(0, 0%, 50%);
+  animation-name: slideIn;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.fileSelDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fileSelDiv:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.midFilesDiv {
+  margin: 0.5rem 0;
+}
+
+.selFileImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.docsImg {
+  background-color: hsl(287, 100%, 50%);
+}
+
+.galleryImg {
+  background-color: hsl(200, 100%, 50%);
+}
+
+.audioImg {
+  background-color: hsl(25, 100%, 50%);
+}
+
+.fileSelDiv img {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(1);
+}
+
+.selectedFile {
+  position: absolute;
+  right: 0.3rem;
+  bottom: 4.3rem;
+  /* width: calc(80%); */
+  /* height: 10rem; */
+  background-color: hsla(0, 0%, 100%, 0.7);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 4px 1px hsl(0, 0%, 65%);
+  animation-name: slideUp;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.minimizeSelectedFile {
+  height: 2.5rem;
+  width: 7rem;
+}
+
+.minimizePreviewIcon {
+  visibility: hidden;
+}
+
+.minimizePreview {
+  position: absolute;
+  top: 0.5rem;
+  left: 2.5rem;
+  /* font-weight: bold; */
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 15%, 0.8);
+  box-shadow: 0 0 4px 1px hsl(0, 0%, 85%);
+  padding: 0.2rem;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+}
+
+.minimizePreview:hover {
+  background-color: hsl(0, 0%, 15%, 1);
+}
+
+.progressBar {
+  position: absolute;
+  width: 2rem;
+  right: 0.2rem;
+  bottom: 0.2rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.previewImgDiv,
+.previewVidDiv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 20rem;
+}
+
+.previewAudioDiv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.previewDocDiv {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 15rem;
+}
+
+.previewDoc {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+.fileNameDivDoc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileNameDivDoc a {
+  color: black;
+  text-decoration: none;
+}
+
+.fileNameDiv {
+  width: 100%;
+  word-wrap: break-word;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.fileNameDiv a {
+  color: black;
+  text-decoration: none;
+}
+
+.previewImg,
+.previewVideo {
+  width: 20rem;
+  box-shadow: 0 0 4px 1px hsl(0, 0%, 75%);
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0%;
+    bottom: 3.8rem;
+  }
+  100% {
+    bottom: 4.3rem;
+    opacity: 100%;
+  }
+}
+
+.fileMsgImgDiv,
+.fileMsgVidDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0.2rem;
+  border-radius: 0.8rem 0.8rem 0 0;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.fileMsgImg,
+.fileMsgVideo {
+  width: 20rem;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.fileMsgIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileMsgNameDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileMsgAudioDiv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fileMsgAudio {
+  padding: 0.2rem;
+}
+
+.fileMsgDocDiv {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.3rem;
+  margin: 0.1rem;
+  border-radius: 0.8rem 0.8rem 0 0;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.fileMsgDoc {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.fileMsgNameDivDoc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileMsgNameDivDoc a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.fileMsgNameDiv {
+  width: 100%;
+  word-wrap: break-word;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.fileMsgNameDiv a {
+  color: #a6a6a6;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closePreview {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  /* font-weight: bold; */
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 15%, 0.8);
+  box-shadow: 0 0 4px 1px hsl(0, 0%, 85%);
+  padding: 0.2rem;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+}
+
+.closePreview:hover {
+  background-color: hsl(0, 0%, 15%, 1);
+}
+
+.uploading {
+  position: absolute;
+  color: white;
+  bottom: 0.1rem;
+  left: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.chatComponentBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.chatComponentBottom form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.inputMsg {
+  flex-grow: 1;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 4px 1px hsl(0, 0%, 85%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.attachFile img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.chatComponentBottom input {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.chatComponentBottom input:focus {
+  outline: none;
+}
+
+.chatComponentBottom button {
+  outline: none;
+  border: none;
+  aspect-ratio: 1/1;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.chatComponentBottom button img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .ellipse {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .homeLeft {
+    width: 100%;
+    height: 100%;
+  }
+
+  .homeLeft h1 {
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .homeFeatures {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .homeFeatures h2 {
+    font-size: 1.2rem;
+  }
+
+  .creator h3 {
+    font-size: 1.2rem;
+    padding-bottom: 0;
+    margin-top: 1rem;
+  }
+
+  .creator p {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .authDiv {
+    width: 100%;
+    padding: 2rem 0;
+    justify-content: flex-start;
+  }
+
+  .login,
+  .register {
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .login h1,
+  .register h1 {
+    font-size: 2rem;
+  }
+
+  .login form,
+  .register form {
+    padding: 1rem;
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+
+  .inputDiv {
+    width: 90%;
+  }
+
+  .inputDiv input {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .login form button,
+  .register form button {
+    width: 90%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .eye img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .login,
+  .register {
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .dashLeft {
+    width: 33%;
+  }
+  .dashRight {
+    width: 67%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .dashLeft {
+    position: absolute;
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    visibility: hidden;
+  }
+  .dashRight {
+    position: absolute;
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    left: 0.5rem;
+    visibility: hidden;
+  }
+  .backArrow {
+    display: flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  .chatBar {
+    left: 0.5rem;
+    visibility: visible;
+    animation-name: slideRight;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  @keyframes slideRight {
+    0% {
+      opacity: 0%;
+      left: 5rem;
+    }
+    100% {
+      left: 0.5rem;
+      opacity: 100%;
+    }
+  }
+
+  .sideMenu {
+    left: 0.5rem;
+    visibility: visible;
+    animation-name: slideLeft;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  @keyframes slideLeft {
+    0% {
+      opacity: 0%;
+      left: -5rem;
+    }
+    100% {
+      left: 0.5rem;
+      opacity: 100%;
+    }
+  }
+}
